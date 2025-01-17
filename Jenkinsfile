@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('Set Maven Permissions') {
+            steps {
+                echo 'Setting executable permissions for Maven Wrapper...'
+                sh 'chmod +x mvnw'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building the Java application...'
@@ -20,4 +26,6 @@ pipeline {
             }
         }
     }
+}
+
 }
