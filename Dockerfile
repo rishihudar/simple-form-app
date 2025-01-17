@@ -8,7 +8,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y git
 
 # Clone the GitHub repository
-RUN git clone https://github.com/your-username/your-repo.git .
+RUN git clone https://github.com/rishihudar/your-repo.git .
 
 # Install Maven to build the project (if not already installed)
 RUN apt-get install -y maven
