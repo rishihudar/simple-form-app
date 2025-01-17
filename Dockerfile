@@ -16,6 +16,9 @@ RUN apt-get install -y maven
 # Build the JAR file using Maven
 RUN mvn clean package
 
+# Verify if the JAR file is in the target directory (for debugging purposes)
+RUN ls -l target
+
 # Copy the built JAR file into the Docker image
 COPY target/simple-form-app.jar simple-form-app.jar
 
